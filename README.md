@@ -18,18 +18,43 @@ Home -> Login->Product->Cart->End
 
 #Tools & Technologies Used
 
-Category	        Tool / Technology
-Programming       Language	Java
-Automation        Tool	Selenium WebDriver
-Testing           Framework	TestNG
-Browser	          ChromeDriver
-Build Tool	      Maven
-IDE	              Eclipse
-Reporting	        Extent Spark Reports
-Logging	          Log4j
-Test Data	        Excel (testdata.xlsx)
-Configuration	    config.properties
-Data Utility	    ExcelUtils
-Architecture	    Hybrid Framework (POM + Data-Driven)
-Project Structure	Layered (Pages, Tests, Utils, Resources)
+|Category	        |Tool / Technology|
+|-----------------|-----------------|
+|Programming       |Language	Java|
+|Automation        |Tool	Selenium WebDriver|
+|Testing           |Framework	TestNG|
+|Browser	          |ChromeDriver|
+|Build Tool	      |Maven|
+|IDE	              |Eclipse|
+|Reporting	        |Extent Spark Reports|
+|Logging	          |Log4j|
+|Test Data	        |Excel (testdata.xlsx)|
+|Configuration	    | config.properties|
+|Data Utility	    | ExcelUtils|
+|Architecture	    | Hybrid Framework (POM + Data-Driven)|
+|Project Structure |	Layered (Pages, Tests, Utils, Resources)|
 
+# FrameWork Structure
+<img width="380" height="561" alt="CaptureAutomation" src="https://github.com/user-attachments/assets/d94af9ac-1c21-49b0-b855-ee0aed67248a" />
+
+# Test Strategy
+Execution Approach
+
+The automation will follow a modular and parallel development approach to ensure faster execution and maintainability. Each major functionality of the Pepperfry user journey will be automated independently and later integrated into a single end-to-end test flow.
+
+Work Distribution
+Member 1: Framework setup & Home test cases
+Member 2: Category & Product listing test cases
+Member 3: Filter & Product details test cases
+Member 4: cart validation ,Documentation & Reporting
+
+#Product detail verification (name, price, availability) Add to cart functionality Cart page validation Integration Plan Each module will be developed and tested independently using Page Object Model (POM) All modules will be integrated into a single end-to-end test suite Final execution will validate full user journey from homepage to cart verification TestNG suite will be used for orchestration and execution control Testing Focus
+
+# Key areas:
+
+Product data consistency across pages Dynamic UI handling Cart accuracy validation Filter correctness Stability of end-to-end flow Execution Priority First: Happy path execution (valid category → product → cart) Next: UI and functional validations (filters, product selection accuracy) Then: Edge cases (no results, slow loading, pop-ups) Final: Full regression execution (complete end-to-end flow)
+
+Data & Synchronization Handling Test data managed using Excel or properties files Explicit waits used for dynamic product loading Handling AJAX-based updates in product listing and cart Avoid hardcoded product names/prices for stability Proper synchronization to handle dynamic DOM changes Outcome
+
+# Test Cases
+<img width="824" height="559" alt="CaptureAutomation1" src="https://github.com/user-attachments/assets/f473ab44-40f4-42b5-aecc-647c72aa4a9b" />
